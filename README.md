@@ -1,5 +1,11 @@
 # 👁️ Observer AI
 
+<p align="left">
+  <img alt="NPM Version" src="https://img.shields.io/npm/v/@observer-ai/core?color=blue&style=flat-square">
+  <img alt="License" src="https://img.shields.io/npm/l/@observer-ai/core?style=flat-square">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square">
+</p>
+
 **Created by [Zala Viraj](https://github.com/virajsinh47) & [Sakshi Patel](https://github.com/sakshipatel15)**
 
 **The ultimate visual bridge between human designers and AI coding assistants.**
@@ -25,8 +31,28 @@ Observer AI acts as a digital measuring tape. When you click an element on your 
 1. Open your web app and press `Shift + O` to toggle Observer Mode.
 2. Hover over any element on your screen and click to drop a marker.
 3. Type your feedback (e.g., "Make this text lighter").
-4. Press `Shift + C` (or press a number key `1`, `2`, `3` in the popup) to copy the ultra-structured Markdown payload to your clipboard.
+4. Press `Shift + C` to copy the ultra-structured Markdown payload to your clipboard.
 5. Paste it directly into Cursor or ChatGPT. Watch the AI write flawless CSS on the first try.
+
+### What the AI sees (The Magic Payload):
+```markdown
+### 🔵 Annotation 1: button 'Submit Order'
+**Visual Context:** Size: 120px x 44px (at X:450px, Y:800px) | Margin: 0px | Padding: 12px 24px
+**Typography & Color:** Color: rgb(255, 255, 255) | Background: rgb(59, 130, 246) | Font: 600 16px Inter
+**Layout Context:** flex (row) [gap: 8px]
+**Parent Constraints:** display: flex, flexDirection: column, alignItems: center
+**Component Source:** `<ObserverProvider> <App> <CheckoutForm> [src/components/Checkout.tsx:42:10]`
+**User Feedback:** 'make the background color lighter and increase the font size'
+```
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Shift + O` | Toggle Observer Mode On/Off |
+| `Shift + C` | Copy all markers to clipboard instantly |
+| `1`, `2`, `3` | Press numbers while modal is open to copy a specific marker |
+| `Escape` | Close the popup modal |
 
 ## 💻 Framework Usage
 
@@ -91,10 +117,10 @@ Observer AI is built as a monorepo using Turborepo, allowing it to hook into any
 - `@observer-ai/native`: React Native engine using native View measurements.
 - `@observer-ai/mcp`: Local Model Context Protocol server for seamless deep-integration with Cursor and Claude Code.
 
-## 🛠️ Quick Start
+## ⚡ Quick Start
 
 ```bash
-git clone https://github.com/yourusername/observer-ai.git
+git clone https://github.com/virajsinh47/observer-ai.git
 cd observer-ai
 npm install
 npm run dev
