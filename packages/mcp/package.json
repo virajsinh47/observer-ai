@@ -1,0 +1,21 @@
+{
+  "name": "@observer-ai/mcp",
+  "version": "1.0.0",
+  "description": "Local Model Context Protocol Server for Observer AI",
+  "main": "dist/index.js",
+  "bin": {
+    "observer-mcp": "dist/index.js",
+    "observer-sync": "dist/sync.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

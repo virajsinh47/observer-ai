@@ -1,0 +1,16 @@
+{
+  "name": "@observer-ai/web",
+  "version": "1.0.0",
+  "description": "Web Component wrapper for Observer AI (Angular, Ionic, Vanilla JS)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@observer-ai/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

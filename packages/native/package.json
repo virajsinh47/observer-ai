@@ -1,0 +1,19 @@
+{
+  "name": "@observer-ai/native",
+  "version": "1.0.0",
+  "description": "React Native engine for Observer AI",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.72.0"
+  }
+}

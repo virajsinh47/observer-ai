@@ -1,0 +1,14 @@
+{
+  "name": "@observer-ai/core",
+  "version": "1.0.0",
+  "description": "Vanilla TS engine for Observer AI visual feedback",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
