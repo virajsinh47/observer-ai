@@ -1,14 +1,23 @@
-import React from 'react'
-import { Eye, Terminal, Layers, Crosshair, Code2, Github } from 'lucide-react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  const [theme, setTheme] = useState('dark')
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <div className="container">
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-brand">
-          <Eye size={28} />
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
           <span>Observer AI</span>
         </div>
         <div className="nav-links">
@@ -16,10 +25,19 @@ function App() {
           <a href="#how-it-works">How it works</a>
           <a href="#integration">Integration</a>
         </div>
-        <a href="https://github.com/virajsinh47/observer-ai" target="_blank" rel="noreferrer" className="github-btn">
-          <Github size={18} />
-          Star on GitHub
-        </a>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <button onClick={toggleTheme} className="theme-toggle" style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-primary)', cursor: 'pointer' }}>
+            {theme === 'dark' ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            )}
+          </button>
+          <a href="https://github.com/virajsinh47/observer-ai" target="_blank" rel="noreferrer" className="github-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"></path></svg>
+            Star on GitHub
+          </a>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -39,7 +57,7 @@ function App() {
         
         <div className="hero-cta">
           <a href="https://github.com/virajsinh47/observer-ai" target="_blank" rel="noreferrer" className="btn-primary">
-            <Github size={20} />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"></path></svg>
             View Documentation
           </a>
           <a href="#features" className="btn-secondary">
@@ -73,7 +91,7 @@ function App() {
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <Crosshair size={24} />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
             </div>
             <h3 className="feature-title">Zero Hallucinations</h3>
             <p className="feature-desc">
@@ -83,7 +101,7 @@ function App() {
 
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <Terminal size={24} />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
             </div>
             <h3 className="feature-title">Deep Component Tracing</h3>
             <p className="feature-desc">
@@ -93,7 +111,7 @@ function App() {
 
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <Layers size={24} />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
             </div>
             <h3 className="feature-title">Parent Constraints</h3>
             <p className="feature-desc">
@@ -136,7 +154,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <Eye size={32} color="var(--accent-cyan)" />
+          <svg width="32" height="32" color="var(--accent-cyan)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
           <p className="footer-text">
             Built with precision by <span className="footer-creators">Zala Viraj</span> and <span className="footer-creators">Sakshi Patel</span>
           </p>
