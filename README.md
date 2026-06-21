@@ -1,5 +1,7 @@
 # 👁️ Observer AI
 
+**Created by [Zala Viraj](https://github.com/virajsinh47) & [Sakshi Patel](https://github.com/sakshipatel15)**
+
 **The ultimate visual bridge between human designers and AI coding assistants.**
 
 Observer AI is a framework-agnostic, drop-in browser tool that completely eliminates the need for screenshots when prompting AI assistants like Cursor, GitHub Copilot, or Claude. 
