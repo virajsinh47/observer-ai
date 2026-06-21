@@ -64,6 +64,24 @@ Then, drop the web component directly into your main HTML file or root template:
 <observer-provider></observer-provider>
 ```
 
+### React Native & Expo
+For iOS and Android development, Observer AI uses native `View` measurements.
+```bash
+npm install @observer-ai/native
+```
+Wrap your root `App.tsx` (or `_layout.tsx` if using Expo Router):
+```tsx
+import { ObserverProvider } from '@observer-ai/native';
+
+export default function App() {
+  return (
+    <ObserverProvider>
+      <YourApp />
+    </ObserverProvider>
+  );
+}
+```
+
 ## 📦 Packages
 
 Observer AI is built as a monorepo using Turborepo, allowing it to hook into any stack:
