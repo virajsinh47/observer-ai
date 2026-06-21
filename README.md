@@ -128,6 +128,13 @@ npm run dev
 
 Open `localhost:5173` to play with the sandbox environment.
 
+## 🐛 Support & Feedback
+If you encounter any bugs, issues, or have feature requests, please **[open an issue](https://github.com/virajsinh47/observer-ai/issues)** on this GitHub repository. 
+
+You can also reach out to the creators directly on GitHub:
+- [@virajsinh47](https://github.com/virajsinh47)
+- [@sakshipatel15](https://github.com/sakshipatel15)
+
 ## 🤝 Contributing
 Pull requests are welcome! Since this tool operates strictly on the DOM, it is highly extensible. If you want to add better specific support for a new framework, open an issue or submit a PR.
 
