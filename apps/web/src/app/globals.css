@@ -362,7 +362,7 @@ button {
 /* Package Manager Sub-Tabs */
 .pm-tabs {
   display: flex;
-  background: var(--bg-color-secondary);
+  background: #000;
   border-bottom: 1px solid var(--code-border);
   padding: 0 1rem;
 }
@@ -371,14 +371,14 @@ button {
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   font-family: var(--font-mono);
-  color: var(--text-secondary);
+  color: #94a3b8;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   transition: all 0.2s ease;
 }
 
 .pm-tab:hover {
-  color: var(--text-primary);
+  color: #f8fafc;
 }
 
 .pm-tab.active {
